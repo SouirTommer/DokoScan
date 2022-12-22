@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E90A91CC28B7E525002DEA7A /* RoomCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A91CB28B7E525002DEA7A /* RoomCaptureViewController.swift */; };
+		E90A91CF28B8EC90002DEA7A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A91CE28B8EC90002DEA7A /* PreviewViewController.swift */; };
+		E90A91D128BA56AD002DEA7A /* ModalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A91D028BA56AD002DEA7A /* ModalManager.swift */; };
+		E90A91D828BB8D8E002DEA7A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E90A91D728BB8D8E002DEA7A /* Lottie */; };
+		E90A91DC28BB92B0002DEA7A /* home_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = E90A91DB28BB92B0002DEA7A /* home_animation.json */; };
+		E986875F28BCD161007DAD04 /* CaptureRoomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E986875E28BCD161007DAD04 /* CaptureRoomExtensions.swift */; };
+		E986876228BCD18D007DAD04 /* SCNNodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E986876128BCD18D007DAD04 /* SCNNodeExtensions.swift */; };
+		E986876528BDECA6007DAD04 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E986876428BDECA6007DAD04 /* UIViewControllerExtensions.swift */; };
+		E9FBC7DB28B6678C00D0A3F4 /* DokoScanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC7DA28B6678C00D0A3F4 /* DokoScanApp.swift */; };
+		E9FBC7DD28B6678C00D0A3F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC7DC28B6678C00D0A3F4 /* HomeView.swift */; };
+		E9FBC7DF28B6678C00D0A3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FBC7DE28B6678C00D0A3F4 /* Assets.xcassets */; };
+		E9FBC7E228B6678C00D0A3F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FBC7E128B6678C00D0A3F4 /* Preview Assets.xcassets */; };
+		E9FBC80728B69CF500D0A3F4 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC80628B69CF500D0A3F4 /* PrimaryButtonStyle.swift */; };
+		E9FBC80928B69FC100D0A3F4 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC80828B69FC100D0A3F4 /* ScannerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E90A91CB28B7E525002DEA7A /* RoomCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCaptureViewController.swift; sourceTree = "<group>"; };
+		E90A91CE28B8EC90002DEA7A /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		E90A91D028BA56AD002DEA7A /* ModalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalManager.swift; sourceTree = "<group>"; };
+		E90A91DB28BB92B0002DEA7A /* home_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home_animation.json; sourceTree = "<group>"; };
+		E986875E28BCD161007DAD04 /* CaptureRoomExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureRoomExtensions.swift; sourceTree = "<group>"; };
+		E986876128BCD18D007DAD04 /* SCNNodeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNodeExtensions.swift; sourceTree = "<group>"; };
+		E986876428BDECA6007DAD04 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		E9FBC7D728B6678C00D0A3F4 /* DokoScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DokoScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9FBC7DA28B6678C00D0A3F4 /* DokoScanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokoScanApp.swift; sourceTree = "<group>"; };
+		E9FBC7DC28B6678C00D0A3F4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E9FBC7DE28B6678C00D0A3F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9FBC7E128B6678C00D0A3F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9FBC80628B69CF500D0A3F4 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		E9FBC80828B69FC100D0A3F4 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9FBC7D428B6678C00D0A3F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90A91D828BB8D8E002DEA7A /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E90A91CD28B8EC07002DEA7A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E90A91CB28B7E525002DEA7A /* RoomCaptureViewController.swift */,
+				E90A91CE28B8EC90002DEA7A /* PreviewViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E90A91D228BA56CB002DEA7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBC7DC28B6678C00D0A3F4 /* HomeView.swift */,
+				E9FBC80828B69FC100D0A3F4 /* ScannerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E90A91D328BA56D1002DEA7A /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBC80628B69CF500D0A3F4 /* PrimaryButtonStyle.swift */,
+			);
+			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
+		E90A91D428BA56EE002DEA7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E90A91DB28BB92B0002DEA7A /* home_animation.json */,
+				E9FBC7DE28B6678C00D0A3F4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E90A91D528BA5717002DEA7A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E90A91D028BA56AD002DEA7A /* ModalManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E986876028BCD167007DAD04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E986875E28BCD161007DAD04 /* CaptureRoomExtensions.swift */,
+				E986876128BCD18D007DAD04 /* SCNNodeExtensions.swift */,
+				E986876428BDECA6007DAD04 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E986876328BDEC8B007DAD04 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E90A91CD28B8EC07002DEA7A /* ViewControllers */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E9FBC7CE28B6678C00D0A3F4 = {
+			isa = PBXGroup;
+			children = (
+				E9FBC7D928B6678C00D0A3F4 /* DokoScanApp */,
+				E9FBC7D828B6678C00D0A3F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9FBC7D828B6678C00D0A3F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBC7D728B6678C00D0A3F4 /* DokoScan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9FBC7D928B6678C00D0A3F4 /* DokoScanApp */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBC7DA28B6678C00D0A3F4 /* DokoScanApp.swift */,
+				E90A91D328BA56D1002DEA7A /* ButtonStyles */,
+				E90A91D528BA5717002DEA7A /* Managers */,
+				E90A91D228BA56CB002DEA7A /* Views */,
+				E986876028BCD167007DAD04 /* Extensions */,
+				E986876328BDEC8B007DAD04 /* UIKit */,
+				E9FBC7E028B6678C00D0A3F4 /* Preview Content */,
+				E90A91D428BA56EE002DEA7A /* Resources */,
+			);
+			path = DokoScanApp;
+			sourceTree = "<group>";
+		};
+		E9FBC7E028B6678C00D0A3F4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBC7E128B6678C00D0A3F4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9FBC7D628B6678C00D0A3F4 /* DokoScan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9FBC7FB28B6678D00D0A3F4 /* Build configuration list for PBXNativeTarget "DokoScan" */;
+			buildPhases = (
+				E9FBC7D328B6678C00D0A3F4 /* Sources */,
+				E9FBC7D428B6678C00D0A3F4 /* Frameworks */,
+				E9FBC7D528B6678C00D0A3F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DokoScan;
+			packageProductDependencies = (
+				E90A91D728BB8D8E002DEA7A /* Lottie */,
+			);
+			productName = GiftWrap;
+			productReference = E9FBC7D728B6678C00D0A3F4 /* DokoScan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9FBC7CF28B6678C00D0A3F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					E9FBC7D628B6678C00D0A3F4 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = E9FBC7D228B6678C00D0A3F4 /* Build configuration list for PBXProject "DokoScan" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9FBC7CE28B6678C00D0A3F4;
+			packageReferences = (
+				E90A91D628BB8D8E002DEA7A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = E9FBC7D828B6678C00D0A3F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9FBC7D628B6678C00D0A3F4 /* DokoScan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9FBC7D528B6678C00D0A3F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90A91DC28BB92B0002DEA7A /* home_animation.json in Resources */,
+				E9FBC7E228B6678C00D0A3F4 /* Preview Assets.xcassets in Resources */,
+				E9FBC7DF28B6678C00D0A3F4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9FBC7D328B6678C00D0A3F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9FBC80728B69CF500D0A3F4 /* PrimaryButtonStyle.swift in Sources */,
+				E90A91D128BA56AD002DEA7A /* ModalManager.swift in Sources */,
+				E986876528BDECA6007DAD04 /* UIViewControllerExtensions.swift in Sources */,
+				E986876228BCD18D007DAD04 /* SCNNodeExtensions.swift in Sources */,
+				E9FBC80928B69FC100D0A3F4 /* ScannerView.swift in Sources */,
+				E9FBC7DD28B6678C00D0A3F4 /* HomeView.swift in Sources */,
+				E90A91CF28B8EC90002DEA7A /* PreviewViewController.swift in Sources */,
+				E9FBC7DB28B6678C00D0A3F4 /* DokoScanApp.swift in Sources */,
+				E90A91CC28B7E525002DEA7A /* RoomCaptureViewController.swift in Sources */,
+				E986875F28BCD161007DAD04 /* CaptureRoomExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E9FBC7F928B6678D00D0A3F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9FBC7FA28B6678D00D0A3F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9FBC7FC28B6678D00D0A3F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DokoScanApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 7ACHJ3BS97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Doko Scan";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Space Scanner requires camera access to scan your space.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nravichan.GiftWrap.T;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9FBC7FD28B6678D00D0A3F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DokoScanApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 7ACHJ3BS97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Doko Scan";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Space Scanner requires camera access to scan your space.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nravichan.GiftWrap.T;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9FBC7D228B6678C00D0A3F4 /* Build configuration list for PBXProject "DokoScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9FBC7F928B6678D00D0A3F4 /* Debug */,
+				E9FBC7FA28B6678D00D0A3F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9FBC7FB28B6678D00D0A3F4 /* Build configuration list for PBXNativeTarget "DokoScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9FBC7FC28B6678D00D0A3F4 /* Debug */,
+				E9FBC7FD28B6678D00D0A3F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E90A91D628BB8D8E002DEA7A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E90A91D728BB8D8E002DEA7A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E90A91D628BB8D8E002DEA7A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E9FBC7CF28B6678C00D0A3F4 /* Project object */;
+}
