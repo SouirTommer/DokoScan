@@ -1,9 +1,3 @@
-//
-//  ModalManager.swift
-//  SpaceScanner
-//
-//  Created by Niranjan Ravichandran on 8/27/22.
-//
 
 import UIKit
 

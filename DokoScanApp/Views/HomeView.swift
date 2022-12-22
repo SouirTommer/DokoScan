@@ -1,9 +1,4 @@
-//
-//  HomeView.swift
-//  SpaceScanner
-//
-//  Created by Niranjan Ravichandran on 8/24/22.
-//
+
 
 import ARKit
 import SwiftUI

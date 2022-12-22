@@ -1,9 +1,3 @@
-//
-//  RoomCaptureViewController.swift
-//  SpaceScanner
-//
-//  Created by Niranjan Ravichandran on 8/25/22.
-//
 
 import UIKit
 import RoomPlan

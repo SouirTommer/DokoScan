@@ -1,9 +1,3 @@
-//
-//  UIViewControllerExtensions.swift
-//  SpaceScanner
-//
-//  Created by Niranjan Ravichandran on 8/30/22.
-//
 
 import UIKit
 
