@@ -18,6 +18,8 @@ class PreviewViewController: UIViewController {
     private var currentAngleY: Float = 0.0
     private let modelLoader = ModelLoader()
     private var selectionState: SelectionState = .none
+    
+    let textView = UITextView(frame: CGRect.zero)
     private var isAnyModelLoaded = false {
         didSet {
             updateRightNavigationItems()
@@ -193,15 +195,15 @@ private extension PreviewViewController {
     
     func setupToolTipView() -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 60))
-        view.backgroundColor = .systemBlue.withAlphaComponent(0.9)
+        view.backgroundColor = .systemGray.withAlphaComponent(0.6)
         view.clipsToBounds = true
-        view.layer.cornerRadius = 30
+        view.layer.cornerRadius = 20
         let label = UILabel(frame: view.bounds.insetBy(dx: 8, dy: 8))
         view.addSubview(label)
         label.textColor = .white
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.text = "Select and rotate the room"
+        label.text = "Click on the furniture and start tagging"
         return view
     }
     
@@ -226,13 +228,13 @@ private extension PreviewViewController {
     func showToolTip() {
         toolTipView.alpha = 0
         toolTipView.center.x = view.center.x
-        toolTipView.frame.origin.y = view.bounds.height
+        toolTipView.frame.origin.y = 0//view.bounds.height
         
         view.addSubview(toolTipView)
         view.bringSubviewToFront(toolTipView)
         
         UIView.animate(withDuration: 1.0, animations: {
-            self.toolTipView.frame.origin.y = self.view.bounds.height - self.toolTipView.frame.height - 100
+            self.toolTipView.frame.origin.y = 50//self.view.bounds.height - self.toolTipView.frame.height - 100
             self.toolTipView.alpha = 1
         }) { _ in
             self.scheduleToolTipDismissal()
@@ -243,7 +245,7 @@ private extension PreviewViewController {
         Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { timer in
             timer.invalidate()
             UIView.animate(withDuration: 0.4) {
-                self.toolTipView.frame.origin.y = self.view.bounds.height
+                self.toolTipView.frame.origin.y = 0//self.view.bounds.height
                 self.toolTipView.alpha = 0
             }
         }
@@ -348,29 +350,48 @@ private extension PreviewViewController {
             return
         }
         
-        let objectmenu = UIAlertController(title: nil, message: "What do you want", preferredStyle: .actionSheet)
+        var selectedMsg = ""
         
+            if selectedNode.geometry?.firstMaterial?.diffuse.contents as! NSObject == UIColor.systemRed.withAlphaComponent(0.8) {
+                
+                selectedMsg = "Important furniture"
+            } else if selectedNode.geometry?.firstMaterial?.diffuse.contents as! NSObject == UIColor(red: 75/255, green: 145/255, blue: 250/255, alpha: 1) {
+                
+                selectedMsg = "Useful furniture"
+            } else if selectedNode.geometry?.firstMaterial?.diffuse.contents as! NSObject == UIColor.systemGreen.withAlphaComponent(0.8) {
+                
+                selectedMsg = "Medicine box"
+            }
+            
+            else if selectedNode.accessibilityValue == nil{
+                selectedMsg = "Tag your funuture"
+            }
+        
+        if selectedNode.accessibilityValue != nil{
+            selectedMsg += "\n\n"+selectedNode.accessibilityValue!
+        }
+        
+        let objectmenu = UIAlertController(title: nil, message: selectedMsg, preferredStyle: .actionSheet)
         
         if selectedNode.geometry?.firstMaterial?.diffuse.contents as! NSObject == UIColor.systemGray.withAlphaComponent(0.8){
             
             
-            objectmenu.addAction(.init(title: "give name", style: .default) { [weak self] _ in
-                self?.shouldDrawFurnitures.toggle()
+            objectmenu.addAction(.init(title: "Mark text", style: .default) { [weak self] _ in
+                self?.markalert(selectedNode: selectedNode)
             })
-            objectmenu.addAction(.init(title: "Tag it Red", style: .default) { [weak self] _ in
-                
+            objectmenu.addAction(.init(title: "Tag as Important (RED)", style: .default) { [weak self] _ in
                 self?.selectionState = .surface(selectedNode)
                 selectedNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemRed.withAlphaComponent(0.8)
                 
                 
             })
-            objectmenu.addAction(.init(title: "Tag it Blue", style: .default) { [weak self] _ in
+            objectmenu.addAction(.init(title: "Tag as Useful (Blue)", style: .default) { [weak self] _ in
                 
                 self?.selectionState = .surface(selectedNode)
                 selectedNode.geometry?.firstMaterial?.diffuse.contents = UIColor(red: 75/255, green: 145/255, blue: 250/255, alpha: 1)
                 
             })
-            objectmenu.addAction(.init(title: "Tag it Green", style: .default) { [weak self] _ in
+            objectmenu.addAction(.init(title: "Tag as Medicine box (Green)", style: .default) { [weak self] _ in
                 
                 self?.selectionState = .surface(selectedNode)
                 selectedNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemGreen.withAlphaComponent(0.8)
@@ -380,11 +401,12 @@ private extension PreviewViewController {
             objectmenu.addAction(.init(title: "Cancel", style: .cancel))
             present(objectmenu, animated: true)
         } else {
-            
-            objectmenu.addAction(.init(title: "rename", style: .default) { [weak self] _ in
-                self?.shouldDrawFurnitures.toggle()
+            objectmenu.addAction(.init(title: "Mark text", style: .default) { [weak self] _ in
+                
+                self?.markalert(selectedNode: selectedNode)
+                
             })
-            objectmenu.addAction(.init(title: "UnTag it", style: .default) { [weak self] _ in
+            objectmenu.addAction(.init(title: "UnTag", style: .default) { [weak self] _ in
                 self?.selectionState = .none
                 selectedNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemGray.withAlphaComponent(0.8)
             })
@@ -395,4 +417,49 @@ private extension PreviewViewController {
         }
         
     }
+
+    func markalert(selectedNode: SCNNode) -> SCNNode{
+        let alertController = UIAlertController(title: "Mark text \n\n\n", message: nil, preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction.init(title: "Cancel", style: .cancel) { (action) in
+            alertController.view.removeObserver(self, forKeyPath: "bounds")
+        }
+        alertController.addAction(cancelAction)
+
+        let saveAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
+            let enteredText = self.textView.text
+            selectedNode.accessibilityValue = enteredText
+            alertController.view.removeObserver(self, forKeyPath: "bounds")
+        }
+        alertController.addAction(saveAction)
+
+        alertController.view.addObserver(self, forKeyPath: "bounds", options: NSKeyValueObservingOptions.new, context: nil)
+        textView.layer.cornerRadius = 5
+        textView.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        textView.layer.borderWidth = 0.5
+        textView.clipsToBounds = true
+        textView.textContainerInset = UIEdgeInsets.init(top: 8, left: 5, bottom: 8, right: 5)
+        
+        alertController.view.addSubview(self.textView)
+
+        self.present(alertController, animated: true, completion: nil)
+        self.textView.text = nil
+        return selectedNode
+    }
+
+    internal override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "bounds"{
+            if let rect = (change?[NSKeyValueChangeKey.newKey] as? NSValue)?.cgRectValue {
+                let margin: CGFloat = 20
+                let xPos = rect.origin.x + margin
+                let yPos = rect.origin.y + 54
+                let width = rect.width - 2 * margin
+                let height: CGFloat = 50
+
+                textView.frame = CGRect.init(x: xPos, y: yPos, width: width, height: height)
+            }
+        }
+    }
+
+
 }
