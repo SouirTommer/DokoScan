@@ -4,7 +4,7 @@ import SwiftUI
 struct DokoScanApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            TestView()
         }
     }
 }

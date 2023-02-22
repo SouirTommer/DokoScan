@@ -109,10 +109,7 @@ class PreviewViewController: UIViewController {
             case .door:
                 geometry.firstMaterial?.diffuse.contents = UIColor.green.withAlphaComponent(0.75)
             case .floor:
-                
                 break
-                //                    print("Position before rotation:", node.position, "pivot: ", node.pivot)
-                //                    geometry.firstMaterial?.diffuse.contents = UIImage(named: "wooden_texture")
             case .furniture:
                 geometry.firstMaterial?.diffuse.contents = UIColor.systemGray.withAlphaComponent(0.8)
             case .wall:
@@ -150,6 +147,7 @@ private extension PreviewViewController {
         )
         navigationItem.rightBarButtonItem = optionsButton
     }
+    
     
     func startActivity() {
         guard !view.subviews.contains(where: { $0 == activity }) else { return }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8B27B829A65447004BAA7D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8B27B729A65447004BAA7D /* TestView.swift */; };
 		E90A91CC28B7E525002DEA7A /* RoomCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A91CB28B7E525002DEA7A /* RoomCaptureViewController.swift */; };
 		E90A91CF28B8EC90002DEA7A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A91CE28B8EC90002DEA7A /* PreviewViewController.swift */; };
 		E90A91D128BA56AD002DEA7A /* ModalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A91D028BA56AD002DEA7A /* ModalManager.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A8B27B729A65447004BAA7D /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E90A91CB28B7E525002DEA7A /* RoomCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCaptureViewController.swift; sourceTree = "<group>"; };
 		E90A91CE28B8EC90002DEA7A /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		E90A91D028BA56AD002DEA7A /* ModalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalManager.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				E9FBC7DC28B6678C00D0A3F4 /* HomeView.swift */,
 				E9FBC80828B69FC100D0A3F4 /* ScannerView.swift */,
+				2A8B27B729A65447004BAA7D /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				E9FBC80728B69CF500D0A3F4 /* PrimaryButtonStyle.swift in Sources */,
 				E90A91D128BA56AD002DEA7A /* ModalManager.swift in Sources */,
+				2A8B27B829A65447004BAA7D /* TestView.swift in Sources */,
 				E986876528BDECA6007DAD04 /* UIViewControllerExtensions.swift in Sources */,
 				E986876228BCD18D007DAD04 /* SCNNodeExtensions.swift in Sources */,
 				E9FBC80928B69FC100D0A3F4 /* ScannerView.swift in Sources */,

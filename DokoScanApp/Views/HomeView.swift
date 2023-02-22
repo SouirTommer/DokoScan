@@ -40,9 +40,9 @@ struct HomeView: View {
                     .padding()
                     .multilineTextAlignment(.center)
                 Button {
-                    withAnimation { showRoomCaptureView.toggle() }
+                    withAnimation { showPreview.toggle() }
                 } label: {
-                    Text("Begin Scan")
+                    Text("View Scanned Room")
                 }
                 .buttonStyle(PrimaryButtonStyle())
                 .disabled(!isRoomCaptureSupported)
@@ -51,9 +51,9 @@ struct HomeView: View {
                 Spacer()
                 
                 Button {
-                    withAnimation { showPreview.toggle() }
+                    withAnimation { showRoomCaptureView.toggle() }
                 } label: {
-                    Text("View Scanned Space")
+                    Text("haven't scan? begin scan")
                 }
             }
             .padding()
