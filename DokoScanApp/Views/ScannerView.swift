@@ -26,22 +26,3 @@ struct PreviewView: UIViewControllerRepresentable {
 
 }
 
-
-struct SimpleAnimationView: UIViewRepresentable {
-
-    let animationName: String
-
-    func makeUIView(context: Context) -> some AnimationView {
-        let animationView = AnimationView(animation: Animation.named(animationName))
-        animationView.loopMode = .loop
-        animationView.contentMode = .scaleAspectFit
-        animationView.clipsToBounds = true
-        animationView.play()
-        return animationView
-    }
-
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-
-    }
-
-}
