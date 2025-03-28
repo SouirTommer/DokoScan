@@ -17,12 +17,9 @@ Dokoscan is an iOS application that leverages the RoomPlan API to scan rooms and
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/dokoscan.git
-   cd dokoscan
-Open the project in Xcode.
-Build and run the application on a compatible iOS device or simulator.
+1. Clone the repository
+2. Open the project in Xcode.
+3. Build and run the application on a compatible iOS device or simulator.
 
 ## Usage
 Launch the app and grant camera permissions.
